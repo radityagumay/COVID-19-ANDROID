@@ -1,8 +1,8 @@
-package com.radityalabs.android.corona
+package com.radityalabs.android.corona.features.main.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.radityalabs.android.corona.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.radityalabs.android.corona.R
 
 class MainActivity : AppCompatActivity() {
 

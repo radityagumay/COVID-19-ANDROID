@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.ui.main
+package com.radityalabs.android.corona.features.main.presentation
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
