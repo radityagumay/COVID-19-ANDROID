@@ -5,5 +5,5 @@ import retrofit2.http.GET
 
 interface CovidService {
     @GET(CONFIRMED_CASE)
-    suspend fun getConfirmedCase(): List<ConfirmedCaseResponse>
+    suspend fun getConfirmedCase(): ConfirmedCaseResponse
 }
