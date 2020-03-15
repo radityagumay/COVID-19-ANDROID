@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Covid" parent="Base.Theme.Covid" >
+        <!-- Colors -->
+        <item name="colorPrimary">@color/indigo_900</item>
+        <item name="colorPrimaryVariant">@color/indigo_900</item>
+        <item name="colorSecondary">@color/light_blue_300</item>
+        <item name="colorSecondaryVariant">@color/light_blue_300</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="colorSurface">@color/white</item>
+
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorOnBackground">@color/black_alpha_87</item>
+        <item name="colorOnSurface">@color/black</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.Covid.ActionBar" parent="Theme.Covid">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/gray</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/gray</item>
+    </style>
+</resources>

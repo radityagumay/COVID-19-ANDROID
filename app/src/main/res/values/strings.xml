@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">COVID-19</string>
+    <string name="put_some_content_here">Lorem ipsum dolom sir amet</string>
+    <string name="any_label">hello world</string>
+    <string name="nav_header_logo_description">put something relevant here</string>
 </resources>
