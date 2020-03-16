@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.features.main.presentation
+package com.radityalabs.android.corona.features.main.presentation.main
 
 import androidx.lifecycle.ViewModel
 

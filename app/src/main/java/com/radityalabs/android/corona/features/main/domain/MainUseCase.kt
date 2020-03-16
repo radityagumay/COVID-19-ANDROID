@@ -2,7 +2,7 @@ package com.radityalabs.android.corona.features.main.domain
 
 import com.radityalabs.android.corona.di.Injector
 import com.radityalabs.android.corona.features.main.data.MainRepository
-import com.radityalabs.android.corona.network.response.ConfirmedCaseResponse
+import com.radityalabs.android.corona.network.model.response.ConfirmedCaseResponse
 
 interface MainUseCase {
     fun fetchConfirmedCovid(): List<ConfirmedCaseResponse>

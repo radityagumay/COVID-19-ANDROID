@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.helpers
+package com.radityalabs.android.corona.extensions
 
 import com.google.gson.Gson
 import java.io.InputStreamReader

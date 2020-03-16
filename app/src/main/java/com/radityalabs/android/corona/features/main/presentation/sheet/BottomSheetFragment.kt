@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.radityalabs.android.corona.R
 import com.radityalabs.android.corona.di.Injector
-import com.radityalabs.android.corona.features.main.presentation.adapter.MainAdapter
+import com.radityalabs.android.corona.features.main.presentation.main.MainAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlin.LazyThreadSafetyMode.NONE
 
@@ -53,7 +53,8 @@ class BottomSheetFragment : Fragment(R.layout.fragment_bottom_sheet) {
     }
 
     private fun initRecycleView(view: View) {
-        rvAdapter = MainAdapter()
+        rvAdapter =
+            MainAdapter()
 
         rvFeeds = view.findViewById(R.id.feeds)
         rvFeeds.adapter = rvAdapter

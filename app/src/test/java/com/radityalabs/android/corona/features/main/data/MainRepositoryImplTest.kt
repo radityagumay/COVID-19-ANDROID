@@ -3,10 +3,10 @@ package com.radityalabs.android.corona.features.main.data
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import com.radityalabs.android.corona.CoroutineRule
-import com.radityalabs.android.corona.helpers.fromJson
-import com.radityalabs.android.corona.helpers.value
+import com.radityalabs.android.corona.extensions.fromJson
+import com.radityalabs.android.corona.extensions.value
 import com.radityalabs.android.corona.network.CovidService
-import com.radityalabs.android.corona.network.response.ConfirmedCaseResponse
+import com.radityalabs.android.corona.network.model.response.ConfirmedCaseResponse
 import com.radityalabs.android.corona.runBlockingTest
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Assert.assertEquals

@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.network.response
+package com.radityalabs.android.corona.network.model.response
 
 import com.google.gson.annotations.SerializedName
 

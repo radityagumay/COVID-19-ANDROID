@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.features.main.presentation
+package com.radityalabs.android.corona.features.main.presentation.main
 
 import android.os.Bundle
 import android.view.View
@@ -22,7 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .replace(R.id.container,
+                    MainFragment.newInstance()
+                )
                 .commitNow()
         }
     }

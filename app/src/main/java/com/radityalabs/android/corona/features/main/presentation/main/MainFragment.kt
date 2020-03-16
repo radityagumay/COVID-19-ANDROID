@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.features.main.presentation
+package com.radityalabs.android.corona.features.main.presentation.main
 
 import android.os.Bundle
 import android.view.View
@@ -104,7 +104,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun addHeatmapLayer(style: Style) {
-        val layer = HeatmapLayer(HEATMAP_LAYER_ID, EARTHQUAKE_SOURCE_ID)
+        val layer = HeatmapLayer(
+            HEATMAP_LAYER_ID,
+            EARTHQUAKE_SOURCE_ID
+        )
         layer.maxZoom = 9f
         layer.setSourceLayer(HEATMAP_LAYER_SOURCE)
         layer.setProperties( // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
@@ -156,7 +159,10 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun addCircleLayer(loadedMapStyle: Style) {
-        val circleLayer = CircleLayer(CIRCLE_LAYER_ID, EARTHQUAKE_SOURCE_ID)
+        val circleLayer = CircleLayer(
+            CIRCLE_LAYER_ID,
+            EARTHQUAKE_SOURCE_ID
+        )
         circleLayer.setProperties( // Size circle radius by earthquake magnitude and zoom level
             circleRadius(
                 interpolate(
@@ -194,7 +200,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             circleStrokeColor("white"),
             circleStrokeWidth(1.0f)
         )
-        loadedMapStyle.addLayerBelow(circleLayer, HEATMAP_LAYER_ID)
+        loadedMapStyle.addLayerBelow(circleLayer,
+            HEATMAP_LAYER_ID
+        )
     }
 
     private fun setupBottomSheetFragment() {
@@ -207,6 +215,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() =
+            MainFragment()
     }
 }

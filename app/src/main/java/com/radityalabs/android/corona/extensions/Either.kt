@@ -1,4 +1,4 @@
-package com.radityalabs.android.corona.helpers
+package com.radityalabs.android.corona.extensions
 
 sealed class Either<out E, out V> {
     data class Failure<out E>(val error: E) : Either<E, Nothing>()
