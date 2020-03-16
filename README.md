@@ -5,9 +5,11 @@ An open source android application to show infos about novel corona virus in Ind
 
 Screenshot
 ----------
-![Heat Map](https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326459.png)
-![Feeds](https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326466.png)
-![Side Ack](https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326470.png)
+<img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326459.png" width="400" height="600" />
+
+<img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326466.png" width="400" height="600" />
+
+<img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326470.png" width="400" height="600" />
 
 License
 -------
