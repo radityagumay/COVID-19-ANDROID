@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.radityalabs.android.corona.R
 import com.radityalabs.android.corona.features.main.presentation.uimodel.FeedModel
 import com.radityalabs.android.corona.extensions.create
+import com.radityalabs.android.corona.extensions.load
 import com.squareup.picasso.Picasso
 
 class MainAdapter :
@@ -35,11 +36,7 @@ class MainAdapter :
         private val tvDescription by lazy { view.findViewById<TextView>(R.id.tvDescription) }
 
         fun bind(feed: FeedModel) {
-            Picasso.get()
-                .load(feed.image)
-                .fit()
-                .tag(view.context)
-                .into(ivPhoto)
+            ivPhoto.load(feed.image, centerCrop = true, fit = true)
             tvDescription.text = feed.description
         }
     }
