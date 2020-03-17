@@ -57,8 +57,10 @@ class BottomSheetFragment : Fragment(R.layout.fragment_bottom_sheet) {
             MainAdapter()
 
         rvFeeds = view.findViewById(R.id.feeds)
-        rvFeeds.adapter = rvAdapter
-        rvFeeds.layoutManager = LinearLayoutManager(context)
+        rvFeeds.apply {
+            adapter = rvAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
     }
 
     companion object {
