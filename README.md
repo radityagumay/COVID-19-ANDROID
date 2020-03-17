@@ -5,7 +5,7 @@ An open source android application to show infos about novel corona virus in Ind
 
 Screenshot
 ----------
-<img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326459.png" width="400" height="600" />
+<img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584412239.png" width="400" height="600" />
 
 <img src="https://github.com/radityagumay/COVID-19/blob/master/public/images/Screenshot_1584326466.png" width="400" height="600" />
 
