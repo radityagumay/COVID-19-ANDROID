@@ -58,6 +58,8 @@ dependencies {
     // image loading
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    implementation 'dev.chrisbanes:insetter-ktx:0.2.0'
+
     testImplementation 'junit:junit:4.13'
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
 

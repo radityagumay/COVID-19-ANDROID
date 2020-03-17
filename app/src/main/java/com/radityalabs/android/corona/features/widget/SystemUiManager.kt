@@ -1,13 +1,16 @@
 package com.radityalabs.android.corona.features.widget
 
 import android.annotation.TargetApi
-import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.view.View
-import android.view.WindowManager
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.core.content.res.use
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
@@ -57,17 +60,6 @@ class SystemUiManager(
         } else {
             updateColorsPreM()
         }
-    }
-
-    private fun setWindowFlag(bits: Int, on: Boolean) {
-        val win = (context as Activity).window
-        val winParams: WindowManager.LayoutParams = win.attributes
-        if (on) {
-            winParams.flags = winParams.flags or bits
-        } else {
-            winParams.flags = winParams.flags and bits.inv()
-        }
-        win.attributes = winParams
     }
 
     @TargetApi(23)
@@ -130,6 +122,31 @@ class SystemUiManager(
         private const val COLOR_NAVIGATION_BAR_INVISIBLE = Color.TRANSPARENT
         private const val COLOR_NAVIGATION_BAR_VISIBLE = 0x4DFFFFFF
     }
+}
+
+@ColorInt
+fun Context.getThemeColor(
+    @AttrRes themeAttrId: Int
+): Int {
+    return obtainStyledAttributes(intArrayOf(themeAttrId))
+        .use {
+            it.getColor(0, Color.MAGENTA)
+        }
+}
+
+fun Context.getThemeColorDrawable(
+    @AttrRes themeAttrId: Int
+): Drawable {
+    return obtainStyledAttributes(intArrayOf(themeAttrId))
+        .use {
+            it.getColor(0, Color.MAGENTA)
+        }.let {
+            convertColorToDrawable(it)
+        }
+}
+
+fun convertColorToDrawable(color: Int): ColorDrawable {
+    return ColorDrawable(color)
 }
 
 fun Context.isNightMode(): Boolean {
