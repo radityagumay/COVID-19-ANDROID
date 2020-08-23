@@ -11,7 +11,7 @@ import dagger.hilt.android.scopes.FragmentScoped
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Named
 
-@Module(includes = [BottomSheetModule.Module::class])
+@Module
 @InstallIn(FragmentComponent::class)
 internal object BottomSheetModule {
     @Provides
@@ -26,10 +26,10 @@ internal object BottomSheetModule {
     internal abstract class Module {
         @Binds
         @FragmentScoped
-        abstract fun providesUseCase(impl: BottomSheetUseCaseImpl): BottomSheetUseCase
+        abstract fun bindsUseCase(impl: BottomSheetUseCaseImpl): BottomSheetUseCase
 
         @Binds
         @FragmentScoped
-        abstract fun providesRepository(impl: BottomSheetRepositoryImpl): BottomSheetRepository
+        abstract fun bindsRepository(impl: BottomSheetRepositoryImpl): BottomSheetRepository
     }
 }
