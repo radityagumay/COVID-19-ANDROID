@@ -7,8 +7,9 @@ import androidx.lifecycle.viewModelScope
 import com.radityalabs.android.corona.features.main.presentation.uimodel.FeedModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class BottomSheetViewModel(
+class BottomSheetViewModel @Inject constructor(
     private val useCase: BottomSheetUseCase,
     private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {

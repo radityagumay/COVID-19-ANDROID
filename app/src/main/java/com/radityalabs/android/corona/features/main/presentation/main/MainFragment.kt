@@ -13,9 +13,9 @@ import com.mapbox.mapboxsdk.style.layers.PropertyFactory.*
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 import com.radityalabs.android.corona.R
 import com.radityalabs.android.corona.features.main.presentation.sheet.BottomSheetFragment
+import dagger.hilt.android.AndroidEntryPoint
 import java.net.URI
 import java.net.URISyntaxException
-
 
 private const val EARTHQUAKE_SOURCE_URL =
     "https://www.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson"
@@ -24,6 +24,7 @@ private const val HEATMAP_LAYER_SOURCE = "earthquakes"
 private const val EARTHQUAKE_SOURCE_ID = "earthquakes"
 private const val CIRCLE_LAYER_ID = "earthquakes-circle"
 
+@AndroidEntryPoint
 class MainFragment : Fragment(R.layout.fragment_main) {
 
     private lateinit var mapView: MapView
@@ -200,7 +201,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             circleStrokeColor("white"),
             circleStrokeWidth(1.0f)
         )
-        loadedMapStyle.addLayerBelow(circleLayer,
+        loadedMapStyle.addLayerBelow(
+            circleLayer,
             HEATMAP_LAYER_ID
         )
     }
@@ -215,7 +217,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     companion object {
-        fun newInstance() =
-            MainFragment()
+        fun newInstance() = MainFragment()
     }
 }

@@ -3,12 +3,13 @@ package com.radityalabs.android.corona.features.main.presentation.sheet
 import com.radityalabs.android.corona.features.main.presentation.uimodel.FeedModel
 import com.radityalabs.android.corona.network.CovidService
 import kotlinx.coroutines.delay
+import javax.inject.Inject
 
 interface BottomSheetRepository {
     suspend fun fetchFeeds(): List<FeedModel>
 }
 
-class BottomSheetRepositoryImpl(
+class BottomSheetRepositoryImpl @Inject constructor(
     private val service: CovidService
 ) : BottomSheetRepository {
     override suspend fun fetchFeeds(): List<FeedModel> {

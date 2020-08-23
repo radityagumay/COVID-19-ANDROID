@@ -16,10 +16,12 @@ import androidx.lifecycle.distinctUntilChanged
 import com.radityalabs.android.corona.R
 import com.radityalabs.android.corona.features.widget.SystemUiManager
 import com.radityalabs.android.corona.features.widget.getThemeColor
+import dagger.hilt.android.AndroidEntryPoint
 import dev.chrisbanes.insetter.doOnApplyWindowInsets
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.LazyThreadSafetyMode.NONE
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private val statusBarColors by lazy(NONE) { SystemUiManager(this) }
 

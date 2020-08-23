@@ -2,18 +2,14 @@ package com.radityalabs.android.corona
 
 import android.app.Application
 import com.mapbox.mapboxsdk.Mapbox
-import com.radityalabs.android.corona.di.Injector
-import com.radityalabs.android.corona.network.NetworkModule
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class CovidApp : Application() {
+
     override fun onCreate() {
         super.onCreate()
-        initGraph()
         initMapBox()
-    }
-
-    private fun initGraph() {
-        Injector.provide<NetworkModule.Factory>()
     }
 
     private fun initMapBox() {
