@@ -1,7 +1,6 @@
-package com.radityalabs.android.corona.features.main.presentation.sheet.di
+package com.radityalabs.android.corona.features.main.presentation.sheet
 
 import com.radityalabs.android.corona.di.module.IO
-import com.radityalabs.android.corona.features.main.presentation.sheet.*
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -10,6 +9,11 @@ import dagger.hilt.android.components.FragmentComponent
 import dagger.hilt.android.scopes.FragmentScoped
 import kotlinx.coroutines.CoroutineDispatcher
 import javax.inject.Named
+import javax.inject.Qualifier
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class IsUnderTest
 
 @Module
 @InstallIn(FragmentComponent::class)
@@ -20,6 +24,11 @@ internal object BottomSheetModule {
         usecase: BottomSheetUseCase,
         @Named(IO) io: CoroutineDispatcher
     ) = BottomSheetViewModel(usecase, io)
+
+    @Provides
+    @FragmentScoped
+    @IsUnderTest
+    fun providesUnderTest(): Boolean = false
 
     @dagger.Module
     @InstallIn(FragmentComponent::class)

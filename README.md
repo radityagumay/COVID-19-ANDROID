@@ -2,6 +2,22 @@
 
 An open source android application to show infos about novel corona virus in Indoesia areas. Feel free to raise any PR or fork this repository.
 
+### Tech stack & Open-source libraries
+- Kotlin based, Coroutines + Flow for asynchronous.
+- Dagger-Hilt
+- JetPack
+  - LiveData - notify domain layer data to views.
+  - Lifecycle - dispose of observing data when lifecycle state changes.
+  - ViewModel - UI related data holder, lifecycle aware.
+- Architecture
+  - MVVM Architecture (View - DataBinding - ViewModel - Model)
+  - Repository pattern
+- Retrofit2 & OkHttp3 - construct the REST APIs and paging network data.
+- Test
+  - JUnit5
+
+### Architecture
+- MVVM + Clean Architecture
 
 Screenshot
 ----------

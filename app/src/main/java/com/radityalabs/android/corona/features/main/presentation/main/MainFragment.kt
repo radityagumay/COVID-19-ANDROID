@@ -110,7 +110,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             EARTHQUAKE_SOURCE_ID
         )
         layer.maxZoom = 9f
-        layer.setSourceLayer(HEATMAP_LAYER_SOURCE)
+        layer.sourceLayer = HEATMAP_LAYER_SOURCE
         layer.setProperties( // Color ramp for heatmap.  Domain is 0 (low) to 1 (high).
             // Begin color ramp at 0-stop with a 0-transparency color
             // to create a blur-like effect.

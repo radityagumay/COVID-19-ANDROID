@@ -2,19 +2,20 @@ package com.radityalabs.android.corona.features.main.presentation.sheet
 
 import com.radityalabs.android.corona.features.main.presentation.uimodel.FeedModel
 import com.radityalabs.android.corona.network.CovidService
-import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 interface BottomSheetRepository {
+
     suspend fun fetchFeeds(): List<FeedModel>
 }
 
 class BottomSheetRepositoryImpl @Inject constructor(
-    private val service: CovidService
+    private val service: CovidService,
+    @IsUnderTest private val isUnderTest: Boolean
 ) : BottomSheetRepository {
+
     override suspend fun fetchFeeds(): List<FeedModel> {
-        delay(1000)
-        return dummyFeeds()
+        return if (isUnderTest) service.getFeeds() else dummyFeeds()
     }
 
     private fun dummyFeeds(): List<FeedModel> {
